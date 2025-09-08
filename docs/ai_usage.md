@@ -6,7 +6,7 @@
 - How I verified correctness (tests, sample data)
 
 
-9/4/25
+
 -ChatGPT-4
 -explain how to sort odd integers from a numerical range from 5 to 27
 -![Uploading image.png…]()
@@ -16,7 +16,7 @@ Use a list comprehension to get only numbers where num % 2 == 1:
 odd_numbers = [num for num in range(5, 28) if num % 2 == 1]
 -tested for accuracy by comparing to sample question and answer
 
-9/5/25
+
 -ChatGPT-4
 -explain enumerate in python
 -enumerate() is a built-in Python function that lets you loop over a sequence (like a list, tuple, or string) and get both:
@@ -30,19 +30,14 @@ The element (value)
 -1. readlines()
 Purpose: Reads the entire file and returns a list of lines, where each line is a string including the newline character (\n) at the end (unless it’s the last line without one).
 Use case: When you want to process the file line by line, and need to treat each line as an individual item in a list.
-
 with open("example.txt", "r") as file:
     lines = file.readlines()
-
 print(lines)
 ['Line 1\n', 'Line 2\n', 'Line 3\n']
-
-
 file.read()
 What it does: Reads the entire contents of a file into a single string.
 Includes: All characters — including newline characters (\n) — as part of the string.
 Use case: When you want to process or analyze the whole file at once (e.g., searching for a pattern, counting characters, etc.).
-
 with open("example.txt", "r") as file:
     content = file.read()
 print(content)
@@ -56,14 +51,14 @@ This reads lines one at a time (memory-efficient), rather than loading the whole
 -changed file.readlines() to file.read()
 -Ran the command with readlines and read separately
 
-
-
-
-
-
-
-
-9/6/25
+-ChatGPT-4
+-how to sort case sensitive words python
+-To sort words in Python with case sensitivity, you can simply use Python's built-in sorted() function or .sort() method without modifying the case.
+words = ["banana", "Apple", "apple", "Banana", "cherry", "Cherry"]
+sorted_words = sorted(words)
+print(sorted_words)
+-No Adjustments made
+-Attached to sample/hint command and attempted code
 
 -ChatGPT-4
 -Explain the following code from Bio.SeqIO import parse def gc_content(seq): gc = seq.count('G') + seq.count('C') return (gc / len(seq)) * 100 max_gc_id = "" max_gc_value = 0 for seq_record in parse("rosalind_gc (1).txt", "fasta"): gc = gc_content(seq_record.seq) if gc > max_gc_value: max_gc_value = gc max_gc_id = seq_record.id print(max_gc_id) print(f"{max_gc_value:.6f}")
